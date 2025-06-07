@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\vCardMaker_Web.props" />
+</Project>

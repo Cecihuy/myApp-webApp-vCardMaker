@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj": {}
+  },
+  "projects": {
+    "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj",
+        "projectName": "vCardMaker_Web",
+        "projectPath": "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj",
+        "packagesPath": "C:\\Users\\Vulus\\.nuget\\packages\\",
+        "outputPath": "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "A:\\Application\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vulus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Users\\Vulus\\.nuget\\packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
