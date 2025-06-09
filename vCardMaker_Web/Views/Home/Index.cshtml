@@ -1,8 +1,34 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model vCardMaker_Web.Repository.CardRepo
+@inject vCardMaker_Web.Models.Card card
+
+@{
+  ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post" asp-action="Index">
+  <div class="">
+    <label>Nama :</label>
+    <input type="text" asp-for="@card.Name"/>
+    <label>Nomor :</label>
+    <input type="text" asp-for="@card.Number" />
+    <button type="submit">Save</button>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Nomor</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach(Card r in Model.GetAllCards()){
+          <tr>
+            <td>@r.Name</td>
+            <td>@r.Number</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</form>

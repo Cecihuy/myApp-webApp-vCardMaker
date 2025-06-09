@@ -1,19 +1,40 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using vCardMaker_Web.Models;
+using vCardMaker_Web.Repository;
 
 namespace vCardMaker_Web.Controllers{
   public class HomeController : Controller{
-    private readonly ILogger<HomeController> _logger;
+    private CardRepo cardRepo;
+    public HomeController(CardRepo cardRepo){
+      this.cardRepo = cardRepo;
+    }
+    [HttpGet]
+    public IActionResult Index() {
+      cardRepo.GetAllCards();
+      return View(cardRepo);
+    }
+    [HttpPost]
+    public IActionResult Index(Card card){
+      cardRepo.SaveCard(card);
+      return View("Index", cardRepo);
+    }
+    
 
-    public HomeController(ILogger<HomeController> logger){
-      _logger = logger;
-    }
-    public IActionResult Index(){
-      return View();
-    }
-    public IActionResult Privacy(){
+
+
+
+
+
+
+
+
+
+
+
+
+    public IActionResult Privacy()
+    {
       return View();
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

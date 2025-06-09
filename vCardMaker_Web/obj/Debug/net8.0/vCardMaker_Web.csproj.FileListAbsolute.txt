@@ -28,3 +28,4 @@ A:\Documents\VSC\myApp-webApp-vCardMaker\vCardMaker_Web\obj\Debug\net8.0\refint\
 A:\Documents\VSC\myApp-webApp-vCardMaker\vCardMaker_Web\obj\Debug\net8.0\vCardMaker_Web.pdb
 A:\Documents\VSC\myApp-webApp-vCardMaker\vCardMaker_Web\obj\Debug\net8.0\vCardMaker_Web.genruntimeconfig.cache
 A:\Documents\VSC\myApp-webApp-vCardMaker\vCardMaker_Web\obj\Debug\net8.0\ref\vCardMaker_Web.dll
+A:\Documents\VSC\myApp-webApp-vCardMaker\vCardMaker_Web\bin\Debug\net8.0\appsettings.Production.json
