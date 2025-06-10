@@ -1,4 +1,7 @@
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using vCardMaker_Web.Models;
@@ -12,6 +15,7 @@ namespace vCardMaker_Web.Controllers{
     }
     [HttpGet]
     public IActionResult Index() {
+      Card card = new Card();
       cardRepo.GetAllCards();
       return View(cardRepo);
     }
@@ -24,7 +28,25 @@ namespace vCardMaker_Web.Controllers{
     [Route("home/deletecontact/{card}")]
     public IActionResult DeleteContact(string card){
       cardRepo.DeleteCard(card);
-      return RedirectToAction("Index", cardRepo);
+      return RedirectToAction("Index");
+    }
+    public IActionResult GenerateVcf()
+    {
+      List<Card> cards = cardRepo.GetAllCards();
+      StringBuilder stringBuilder = new StringBuilder();
+      foreach (Card card in cards)
+      {
+        stringBuilder.AppendLine(card.Header);
+        stringBuilder.AppendLine($"N:{card.Name};");
+        stringBuilder.AppendLine($"TEL;CELL:{card.Number}");
+        stringBuilder.AppendLine(card.Footer);
+        using (FileStream fileStream = new FileStream("vCard.vcf", FileMode.Create))
+        {
+          byte[] bytes = Encoding.UTF8.GetBytes(stringBuilder.ToString());
+          fileStream.Write(bytes);
+        }
+      }
+      return RedirectToAction("Index");
     }
     
 

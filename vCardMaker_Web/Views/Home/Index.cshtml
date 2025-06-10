@@ -1,8 +1,8 @@
 ﻿@model vCardMaker_Web.Repository.CardRepo
-@inject vCardMaker_Web.Models.Card card
 
 @{
   ViewData["Title"] = "Home Page";
+  Card card = new Card();
 }
 
 <form method="post" asp-action="Index">
@@ -34,6 +34,18 @@
           </tr>
         }
       </tbody>
+      @if(Model.GetAllCards().Any()){
+        <tfoot >
+          <tr style="height: 20px;"></tr>
+          <tr >
+            <td colspan="2">
+              <button asp-action="GenerateVcf">Generate .vcf</button>
+            </td>
+            <td style="padding-left: 1ch;"><button>Delete All</button></td>
+          </tr>
+        
+        </tfoot>
+      }
     </table>
   </div>
 </form>
