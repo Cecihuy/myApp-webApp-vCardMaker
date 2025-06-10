@@ -13,19 +13,24 @@
     <input type="text" asp-for="@card.Number" />
     <button type="submit">Save</button>
   </div>
+  <br>
   <div>
     <table>
       <thead>
         <tr>
           <th>Nama</th>
-          <th>Nomor</th>
+          <th style="padding-left: 1ch;">Nomor</th>
+          <th style="padding-left: 1ch;">Action</th>
         </tr>
       </thead>
       <tbody>
         @foreach(Card r in Model.GetAllCards()){
           <tr>
             <td>@r.Name</td>
-            <td>@r.Number</td>
+            <td style="padding-left: 1ch;">@r.Number</td>
+            <td style="padding-left: 1ch;">
+              <button asp-action="DeleteContact" asp-route-nama="@r.Name">Delete</button>
+            </td>
           </tr>
         }
       </tbody>

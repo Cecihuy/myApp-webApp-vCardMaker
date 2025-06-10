@@ -14,5 +14,9 @@ namespace vCardMaker_Web.Repository{
     public void SaveCard(Card data){
       cards.Add(data);
     }
+    public void DeleteCard(string data){
+      Card? cardFound = cards.Find(x => x.Name == data);
+      cards.Remove(cardFound!);
+    }
   }
 }

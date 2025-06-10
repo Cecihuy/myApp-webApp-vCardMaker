@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using vCardMaker_Web.Models;
 using vCardMaker_Web.Repository;
 
@@ -18,6 +19,12 @@ namespace vCardMaker_Web.Controllers{
     public IActionResult Index(Card card){
       cardRepo.SaveCard(card);
       return View("Index", cardRepo);
+    }
+    [HttpPost]
+    [Route("home/deletecontact/{card}")]
+    public IActionResult DeleteContact(string card){
+      cardRepo.DeleteCard(card);
+      return RedirectToAction("Index", cardRepo);
     }
     
 
