@@ -5,7 +5,7 @@
   Card card = new Card();
 }
 
-<form method="post" asp-action="Index">
+<form method="post" asp-action="SaveContact">
   <div class="">
     <label>Nama :</label>
     <input type="text" asp-for="@card.Name"/>
@@ -43,7 +43,6 @@
             </td>
             <td style="padding-left: 1ch;"><button>Delete All</button></td>
           </tr>
-        
         </tfoot>
       }
     </table>

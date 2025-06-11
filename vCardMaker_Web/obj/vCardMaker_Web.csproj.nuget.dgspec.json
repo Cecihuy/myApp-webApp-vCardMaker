@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj": {}
+    "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj": {}
   },
   "projects": {
-    "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj": {
+    "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj",
+        "projectUniqueName": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj",
         "projectName": "vCardMaker_Web",
-        "projectPath": "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj",
+        "projectPath": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\vCardMaker_Web.csproj",
         "packagesPath": "C:\\Users\\Vulus\\.nuget\\packages\\",
-        "outputPath": "A:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\",
+        "outputPath": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "A:\\Application\\Microsoft Visual Studio\\Shared\\NuGetPackages"
