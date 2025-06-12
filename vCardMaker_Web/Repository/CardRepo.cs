@@ -18,5 +18,8 @@ namespace vCardMaker_Web.Repository{
       Card? cardFound = cards.Find(x => x.Name == data);
       cards.Remove(cardFound!);
     }
+    public void DeleteAllCards(){
+      cards.Clear();
+    }
   }
 }

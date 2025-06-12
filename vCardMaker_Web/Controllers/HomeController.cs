@@ -42,5 +42,9 @@ namespace vCardMaker_Web.Controllers{
       }
       return File(bytes, "application/octet-stream", "vCard.vcf");
     }
+    public IActionResult DeleteAllCards(){
+      cardRepo.DeleteAllCards();
+      return RedirectToAction("Index");
+    }
   }
 }
