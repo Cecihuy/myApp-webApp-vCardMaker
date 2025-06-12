@@ -1,52 +1,59 @@
 ﻿@model vCardMaker_Web.Repository.CardRepo
-
+@using vCardMaker_Web.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-  ViewData["Title"] = "Home Page";
   Card card = new Card();
 }
-
-<form method="post" asp-action="SaveContact">
-  <div class="">
-    <label>Nama :</label>
-    <input type="text" asp-for="@card.Name"/>
-    <label>Nomor :</label>
-    <input type="text" asp-for="@card.Number" />
-    <button type="submit">Save</button>
-  </div>
-  <br>
-  <div>
-    @if(Model.GetAllCards().Any()){
-      <table>
-        <thead>
-          <tr>
-            <th>Nama</th>
-            <th style="padding-left: 1ch;">Nomor</th>
-            <th style="padding-left: 1ch;">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach(Card r in Model.GetAllCards()){
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vCardMaker</title>
+</head>
+<body>
+  <form method="post" asp-action="SaveContact">
+    <div class="">
+      <label>Nama :</label>
+      <input type="text" asp-for="@card.Name"/>
+      <label>Nomor :</label>
+      <input type="text" asp-for="@card.Number" />
+      <button type="submit">Save</button>
+    </div>
+    <br>
+    <div>
+      @if(Model.GetAllCards().Any()){
+        <table>
+          <thead>
             <tr>
-              <td>@r.Name</td>
-              <td style="padding-left: 1ch;">@r.Number</td>
+              <th>Nama</th>
+              <th style="padding-left: 1ch;">Nomor</th>
+              <th style="padding-left: 1ch;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach(Card r in Model.GetAllCards()){
+              <tr>
+                <td>@r.Name</td>
+                <td style="padding-left: 1ch;">@r.Number</td>
+                <td style="padding-left: 1ch;">
+                  <button asp-action="DeleteContact" asp-route-nama="@r.Name">Delete</button>
+                </td>
+              </tr>
+            }
+          </tbody>      
+          <tfoot >
+            <tr style="height: 20px;"></tr>
+            <tr >
+              <td colspan="2">
+                <button asp-action="GenerateVcf">Generate .vcf</button>
+              </td>
               <td style="padding-left: 1ch;">
-                <button asp-action="DeleteContact" asp-route-nama="@r.Name">Delete</button>
+                <button asp-action="DeleteAllCards">Delete All</button>
               </td>
             </tr>
-          }
-        </tbody>      
-        <tfoot >
-          <tr style="height: 20px;"></tr>
-          <tr >
-            <td colspan="2">
-              <button asp-action="GenerateVcf">Generate .vcf</button>
-            </td>
-            <td style="padding-left: 1ch;">
-              <button asp-action="DeleteAllCards">Delete All</button>
-            </td>
-          </tr>
-        </tfoot>      
-      </table>
-    }
-  </div>
-</form>
+          </tfoot>      
+        </table>
+      }
+    </div>
+  </form>
+</body>
+</html>

@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\vCardMaker_Web.bundle.scp.css",
-      "PackagePath": "staticwebassets\\vCardMaker_Web.bundle.scp.css"
-    },
-    {
       "Id": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

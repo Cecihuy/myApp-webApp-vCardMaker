@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vCardMaker_Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6736c4e720afec12d1b63c34f0580388e17711aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a223745de4f03d1a81d45f76aadd7298a1f28069")]
 [assembly: System.Reflection.AssemblyProductAttribute("vCardMaker_Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vCardMaker_Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ptNO4MJb6YfSXagS2QkUgbvEp+PR/lP45ilUd3uBjAU=",
+  "Hash": "19ETu2oIQYahKMTsWaQLpOwvmguUS3fCA1afKvB4RYk=",
   "Source": "vCardMaker_Web",
   "BasePath": "_content/vCardMaker_Web",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\vCardMaker_Web.styles.css",
-      "SourceId": "vCardMaker_Web",
-      "SourceType": "Computed",
-      "ContentRoot": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/vCardMaker_Web",
-      "RelativePath": "vCardMaker_Web.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\vCardMaker_Web.styles.css"
-    },
-    {
-      "Identity": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\vCardMaker_Web.bundle.scp.css",
-      "SourceId": "vCardMaker_Web",
-      "SourceType": "Computed",
-      "ContentRoot": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/vCardMaker_Web",
-      "RelativePath": "vCardMaker_Web.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\vCardMaker_Web.bundle.scp.css"
-    },
     {
       "Identity": "a:\\Documents\\VSC\\myApp-webApp-vCardMaker\\vCardMaker_Web\\wwwroot\\css\\site.css",
       "SourceId": "vCardMaker_Web",
