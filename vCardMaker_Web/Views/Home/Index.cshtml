@@ -8,15 +8,18 @@
 <html>
 <head>
   <title>vCardMaker</title>
+  <link rel="stylesheet" href="~/css/gaya.css" />
 </head>
 <body>
+  <h1>vCardMaker</h1>
+  <hr>
   <form method="post" asp-action="SaveContact">
-    <div class="">
+    <div>
       <label>Nama :</label>
       <input type="text" asp-for="@card.Name"/>
       <label>Nomor :</label>
       <input type="text" asp-for="@card.Number" />
-      <button type="submit">Save</button>
+      <button type="submit">Add</button>
     </div>
     <br>
     <div>
@@ -25,16 +28,16 @@
           <thead>
             <tr>
               <th>Nama</th>
-              <th style="padding-left: 1ch;">Nomor</th>
-              <th style="padding-left: 1ch;">Action</th>
+              <th>Nomor</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
             @foreach(Card r in Model.GetAllCards()){
               <tr>
                 <td>@r.Name</td>
-                <td style="padding-left: 1ch;">@r.Number</td>
-                <td style="padding-left: 1ch;">
+                <td>@r.Number</td>
+                <td>
                   <button asp-action="DeleteContact" asp-route-nama="@r.Name">Delete</button>
                 </td>
               </tr>
@@ -46,7 +49,7 @@
               <td colspan="2">
                 <button asp-action="GenerateVcf">Generate .vcf</button>
               </td>
-              <td style="padding-left: 1ch;">
+              <td>
                 <button asp-action="DeleteAllCards">Delete All</button>
               </td>
             </tr>

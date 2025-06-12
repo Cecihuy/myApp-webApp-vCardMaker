@@ -1,0 +1,11 @@
+tr{
+  text-align: left;
+}
+th,td{
+  padding-right: 1ch;
+}
+button{
+  border-color: lightgrey;
+  border-style: solid;
+  cursor: pointer;
+}
