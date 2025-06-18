@@ -20,3 +20,11 @@ Pernyataan Bantahan:
 - sengaja tidak dibuat file presentasi disebabkan projek kedua ini hampir sama dengan projek pertama
 - sengaja tidak memakai javascript dan turunannya untuk fokus pada penggunaan teknologi seminimal mungkin
 - happy koding!!!
+
+-----------------------------------------------------------------------------------
+Add new features generate excel at commit: 6ec37a727f82686a346779cb3ff4345f04f1b947
+
+Fitur baru ditambah:
+- terdapat tombol Generate Excel untuk mendownload file vCardMakerExcel
+- berfungsi untuk menampilkan data dalam bentuk spreadsheet dengan ekstensi .xlsx
+- hanya untuk penyajian data, tidak diperuntukan import kontak ke ponsel
