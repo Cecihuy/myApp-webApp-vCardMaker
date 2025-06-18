@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using vCardMaker_Web.Models;
 using vCardMaker_Web.Repository;
 
-namespace vCardMaker_Web.Controllers{
+namespace vCardMaker_Web.Controllers {
   public class HomeController : Controller{
     private CardRepo cardRepo;
 
@@ -45,6 +47,25 @@ namespace vCardMaker_Web.Controllers{
     public IActionResult DeleteAllCards(){
       cardRepo.DeleteAllCards();
       return RedirectToAction("Index");
+    }
+    public IActionResult GenerateExcel() {
+      List<Card> cards = cardRepo.GetAllCards();
+      using(FileStream fileStreamOnServer = new FileStream("vCardMakerExcel.xlsx", FileMode.Create)) {
+        XLWorkbook xLWorkbook = new XLWorkbook();
+        IXLWorksheet iXLWorksheet = xLWorkbook.Worksheets.Add("Sample Sheet");        
+        iXLWorksheet.Cell(1, 1).Value = "Nama";
+        iXLWorksheet.Cell(1, 2).Value = "Nomor HapE";
+        iXLWorksheet.Range("A1:B1").Style.Font.Bold = true;
+        foreach(var r in cards) {
+          int index = cards.IndexOf(r) + 2;
+          iXLWorksheet.Cell(index, 1).Value = r.Name;
+          iXLWorksheet.Cell(index, 2).Value = r.Number;
+        }
+        iXLWorksheet.Columns().AdjustToContents();
+        xLWorkbook.SaveAs(fileStreamOnServer);
+      }
+      FileStream fileStream = new FileStream("vCardMakerExcel.xlsx", FileMode.Open);
+      return File(fileStream, "application/octet-stream", "vCardMakerExcel.xlsx");
     }
   }
 }

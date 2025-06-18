@@ -46,12 +46,11 @@
           <tfoot >
             <tr style="height: 20px;"></tr>
             <tr >
-              <td colspan="2">
-                <button asp-action="GenerateVcf">Generate .vcf</button>
-              </td>
-              <td>
-                <button asp-action="DeleteAllCards">Delete All</button>
-              </td>
+              <td colspan="2"><button asp-action="GenerateVcf">Generate .vcf</button></td>
+              <td><button asp-action="DeleteAllCards">Delete All</button></td>
+            </tr>
+            <tr>
+              <td><button asp-action="GenerateExcel">Generate Excel</button></td>
             </tr>
           </tfoot>      
         </table>
